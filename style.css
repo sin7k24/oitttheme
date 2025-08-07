@@ -1,0 +1,146 @@
+/*
+Theme Name: My Theme
+Author: Shingo
+Version: 1.0
+*/
+@font-face {
+  font-family: 'Migu1M';
+  src: url('fonts/migu-1m-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Migu1M', 'Noto Sans JP', sans-serif;
+  background: #eeeeee;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* background: #007acc; */
+  /* color: #fff; */
+  padding: 1rem;
+  text-align: center;
+}
+
+/* .pagination {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.pagination a,
+.pagination span {
+  margin: 0 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+} */
+
+/* 現在のページ */
+
+/* 投稿リストの整理 */
+.post-list {
+  display: grid;
+  /* gap: 1rem; */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.post-list article {
+  /* padding: 1.5rem; */
+  border-bottom: 1px solid #ddd;
+}
+
+/* タイトル */
+.post-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 抜粋 */
+.post-list p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* リンク */
+.post-list a {
+  color: #333;
+  text-decoration: none;
+}
+
+.post-list a:hover {
+  text-decoration: underline;
+}
+
+/* ページネーション */
+.pagination {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.pagination a,
+.pagination span {
+  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  color: #333;
+  text-decoration: none;
+}
+
+.pagination .current {
+  background: #333;
+  color: #fff;
+  border-color: #007acc;
+}
+
+
+/** 記事ページ */
+.post-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.8;
+}
+
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.post-body p {
+  margin-bottom: 1.2rem;
+}
+
+.post-body h2, .post-body h3 {
+  border-left: 4px solid #007acc;
+  padding-left: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.post-body blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #555;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+
