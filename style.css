@@ -1,6 +1,11 @@
 /*
-Theme Name: My Theme
-Author: Shingo
+Theme Name: oitttheme
+Author: Shingo Nakanishi
+Author URI: https://one-it-thing.com
+License: MIT
+License URI: https://opensource.org/license/mit/
+Description: A simple and clean theme for WordPress, designed for readability and ease of use.
+Text Domain: oitttheme
 Version: 1.0
 */
 @font-face {
@@ -12,7 +17,7 @@ Version: 1.0
 
 body {
   font-family: 'Migu1M', 'Noto Sans JP', sans-serif;
-  background: #eeeeee;
+  background: #e9e9e9;
   color: #333;
   line-height: 1.6;
   margin: 0;

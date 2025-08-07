@@ -8,7 +8,7 @@
             <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
             <p><?php the_excerpt(); ?></p>
           </article>
-      <?php endwhile; endif; ?>Í
+      <?php endwhile; endif; ?>
     </div>
     <div class="pagination">
       <?php the_posts_pagination( array(
