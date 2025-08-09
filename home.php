@@ -11,8 +11,10 @@
             while (have_posts()) : the_post(); ?>
                 <article>
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <span>更新日：<time datetime="<?php the_time('c'); ?>"><?php the_time('Y年m月d日'); ?></time></span>
-                    <span>カテゴリ：<?php the_category(', '); ?></span>
+                    <div class="post-meta">
+                        <span>更新日：<time datetime="<?php the_time('c'); ?>"><?php the_time('Y年m月d日'); ?></time></span>
+                        <span>カテゴリ：<?php the_category(', '); ?></span>
+                    </div>
                     <p><?php the_excerpt(); ?></p>
                 </article>
         <?php endwhile;
