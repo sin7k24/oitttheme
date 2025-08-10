@@ -282,11 +282,6 @@ footer {
         margin: 0 10px;
     }
 
-    /* メインとサイドバーを縦並びに */
-    .site-content {
-        flex-direction: column;
-    }
-
     main {
         max-width: 100%;
         padding: 1rem;
