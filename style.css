@@ -70,24 +70,6 @@ body>header div a {
 end of header
 */
 
-.site-content {
-    display:flex;
-    flex-direction: row;
-}
-
-aside {
-    width: 200px;
-    padding: 1rem;
-    background: #f9f9f9;
-    border-right: 1px solid #ddd;
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -165,7 +147,6 @@ main {
 .pagination .current {
     background: #333;
     color: #fff;
-    border-color: #007acc;
 }
 
 
@@ -272,5 +253,111 @@ footer {
     text-align: center;
     padding: 0.3rem 0;
     font-size: 0.8rem;
+}
 
+/* =========================================
+   レスポンシブ対応
+   ========================================= */
+
+/* タブレット以下（最大幅768px） */
+@media (max-width: 768px) {
+
+    body{
+        font-size: 0.9rem;
+    }
+
+    /* ヘッダー内のdivを中央寄せ */
+    body>header div {
+        padding: 0.6rem;
+        text-align: center;
+    }
+
+    /* ナビゲーションを中央寄せ＆縦並び */
+    .site-navigation ul {
+        text-align: center;
+    }
+
+    .site-navigation li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    /* メインとサイドバーを縦並びに */
+    .site-content {
+        flex-direction: column;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    /* 投稿カード間隔を少し広げる */
+    .post-list article {
+        padding: 1rem;
+    }
+
+    .post-content {
+        line-height: 1.8;
+        padding: 0 0.5rem;
+    }
+
+    .post-content article {
+        background: #fff;
+        border-radius: 5px;
+        padding: 0 0.2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ページネーション */
+    .pagination .page-numbers:not(.prev):not(.next):not(.current) {
+        display: none;
+    }
+    
+    /* 現在のページと前後のボタンのみ表示 */
+    .pagination .page-numbers.prev,
+    .pagination .page-numbers.next,
+    .pagination .page-numbers.current {
+        display: inline-block;
+    }
+
+    /* フッター情報を縦並びに */
+    .footer-info-items {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    .footer-info-item {
+        width: 100%;
+    }
+}
+
+/* スマホ（最大幅480px） */
+@media (max-width: 480px) {
+
+    /* ロゴ文字サイズを縮小 */
+    body>header div a {
+        font-size: 1.2rem;
+    }
+
+    /* ナビゲーション項目の文字サイズを小さく */
+    .site-navigation a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    /* 記事タイトル・本文サイズ調整 */
+    .post-list h2 {
+        font-size: 1rem;
+    }
+
+    .post-list p {
+        font-size: 0.9rem;
+    }
+
+    /* フッター文字も少し小さめ */
+    .footer-footer {
+        font-size: 0.7rem;
+    }
 }
