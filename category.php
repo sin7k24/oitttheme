@@ -5,36 +5,24 @@
     <header class="page-header">
         <?php
         // カテゴリ名と説明を取得して表示
-        the_archive_title( '<h1 class="page-title">', '</h1>' );
-        the_archive_description( '<div class="archive-description">', '</div>' );
+        the_archive_title('<h1 class="page-title">', '</h1>');
+        the_archive_description('<div class="archive-description">', '</div>');
         ?>
     </header>
 
     <div class="post-list">
-        <?php if ( have_posts() ) : ?>
-            <?php while ( have_posts() ) : the_post(); ?>
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    
-                    <div class="entry-meta">
-                        <span class="posted-on">
-                            <a href="<?php the_permalink(); ?>" rel="bookmark">
-                                <time datetime="<?php echo the_time('c'); ?>">
-                                    [<?php echo the_time('Y.m.d'); ?>] 
-                                </time>
-                            </a>
-                        </span>
-                        <span class="cat-links">
-                            <?php the_category(', '); ?>
-                        </span>
-                    </div>
-                    
-                    <div class="entry-content">
-                        <?php the_excerpt(); ?>
-                    </div>
-                </article>
 
+                    <div class="post-meta">
+                        <span><time datetime="<?php the_time('c'); ?>"><?php the_time('Y年m月d日'); ?></time></span>
+                        <span>カテゴリ：<?php the_category(', '); ?></span>
+                    </div>
+                    <p><?php the_excerpt(); ?></p>
+                </article>
             <?php endwhile; ?>
 
             <?php the_posts_pagination(); ?>

@@ -20,8 +20,11 @@
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <time datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
-                    <?php the_excerpt(); ?>
+                    <div class="post-meta">
+                        <span><time datetime="<?php the_time('c'); ?>"><?php the_time('Y年m月d日'); ?></time></span>
+                        <span>カテゴリ：<?php the_category(', '); ?></span>
+                    </div>
+                    <p><?php the_excerpt(); ?></p>
                 </article>
 
             <?php endwhile; ?>

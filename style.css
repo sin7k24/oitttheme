@@ -8,16 +8,12 @@ Description: A simple and clean theme for WordPress, designed for readability an
 Text Domain: oitttheme
 Version: 1.0
 */
-/* @font-face {
-    font-family: 'Migu1M';
-    src: url('fonts/migu-1m-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
 
+/*
+header
+*/
 body {
-    /* font-family: 'Migu1M', 'Noto Sans JP', sans-serif; */
-    font-family: Noto, Hiragino Sans, Helvetica, Arial, sans-serif;
+    font-family: Noto Sans JP, Hiragino Sans, Helvetica, Arial, sans-serif;
     background: #f1f1f1;
     color: #333;
     line-height: 1.6;
@@ -25,84 +21,81 @@ body {
     padding: 0;
 }
 
-body > header {
+body>header {
     width: 100%;
     background: #ffffff;
-    /* color: #fff; */
-
 }
 
-body > header div {
+body>header div {
     max-width: 1000px;
     margin: 0 auto;
     text-align: left;
     padding: 0.6rem 0;
 }
 
-body > header div a {
+body>header div a {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
     text-decoration: none;
+    margin-right: 1rem;
 }
 
-/* ナビゲーション全体を黒帯にする */
 .site-navigation {
-    background-color: rgba(0, 0, 0, 0.9);
-
+    background: #111;
     padding: 5px 0 5px 0;
-    /* 上下に余白を追加 */
 }
 
-/* リストアイテムのスタイルを調整 */
 .site-navigation ul {
     max-width: 1000px;
     list-style: none;
-    /* リストの点（・）を非表示にする */
     margin: 0 auto;
-    /* 外側の余白をなくす */
     padding: 0;
-    /* 内側の余白をなくす */
     text-align: right;
-    /* 項目を中央揃えにする */
 }
 
-/* リンクを横並びにする */
 .site-navigation li {
     display: inline-block;
-    /* 項目を横並びに配置 */
     margin: 0 15px 0 0;
-    /* 項目間に余白を追加 */
 }
 
-/* リンクのスタイルを調整 */
 .site-navigation a {
     color: #fff;
-    /* 文字色を白に設定 */
     text-decoration: none;
-    /* 下線を非表示にする */
-    /* font-weight: bold; */
-    /* 文字を太くする */
     font-size: 16px;
-    /* フォントサイズを調整 */
     padding: 5px 10px;
-    /* クリックしやすいように余白を追加 */
     transition: color 0.3s ease;
-    /* マウスオーバー時のアニメーション */
+}
+/*
+end of header
+*/
+
+.site-content {
+    display:flex;
+    flex-direction: row;
 }
 
-/* マウスが乗ったときの効果 */
-.site-navigation a:hover {
-    color: #ffd700;
-    /* マウスが乗ったときに文字色を金色に変更 */
+aside {
+    width: 200px;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-right: 1px solid #ddd;
 }
 
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
 .search-bar {
     margin: 1rem auto;
-    max-width: 1000px;
     padding-bottom: 1rem;
 }
 
@@ -113,19 +106,8 @@ body > header div a {
     font-size: 1rem;
 }
 
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* 投稿リストの整理 */
 .post-list {
     display: grid;
-    /* gap: 1rem; */
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .post-list article {
@@ -133,18 +115,13 @@ main {
     margin-bottom: 1rem;
     background: #fff;
     border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.post-list article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .post-meta {
     font-size: 14px;
-    color: #888; /* 薄いグレーの文字色 */
+    color: #888;
     margin-bottom: 15px;
 }
 
@@ -192,10 +169,10 @@ main {
 }
 
 
-/** 記事ページ */
+/*
+single
+*/
 .post-content {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 1rem 1rem;
     line-height: 1.8;
 }
@@ -204,7 +181,7 @@ main {
     background: #fff;
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .post-title {
@@ -212,20 +189,18 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.post-meta {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-}
-
 .post-body p {
     margin-bottom: 1.2rem;
 }
 
-.post-body h2,
-.post-body h3 {
+.post-body h2 {
     border-left: 4px solid #007acc;
     padding-left: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-body h3 {
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -235,6 +210,7 @@ main {
     height: auto;
     display: block;
     margin: 1.5rem auto;
+    border: 1px solid #ccc;
 }
 
 .post-body blockquote {
@@ -243,4 +219,58 @@ main {
     color: #555;
     font-style: italic;
     margin: 1.5rem 0;
+}
+
+
+/*
+footer
+*/
+footer {
+    width: 100%;
+}
+
+.footer-info {
+    background: #ffffff;
+    color: #333;
+}
+
+.footer-info-items {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info-item {
+    width: 48%;
+}
+
+.footer-info-item>h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 15px;
+    text-decoration-color: #007acc;
+}
+
+.footer-info-item>ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.footer-info-item>ul>li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+
 }
